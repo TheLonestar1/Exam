@@ -22,3 +22,5 @@ jobs:
           yarn install
       - name: Rubocop
         run: bundle exec rubocop
+      - name: Rspec
+        run: bundle exec rspec
