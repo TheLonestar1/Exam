@@ -1,0 +1,16 @@
+<h2>Редактирование студента</h2>
+
+<%= form_for :student, url: iv871_path(@student), method: :patch do |f| %>
+    <p>
+        
+       Название</br>
+        <%= f.text_field :tittle %>
+    </p>
+    <p>
+       Название<br>
+        <%= f.text_field :grady %>
+    </p>
+    <p>
+        <%= f.submit %>
+    </p> 
+<%end%>

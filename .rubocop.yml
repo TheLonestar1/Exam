@@ -1,0 +1,40 @@
+require:
+  - rubocop-rspec
+  - rubocop-rails
+
+AllCops:
+  NewCops: enable
+  Exclude:
+    - 'bin/**/*'
+    - 'spec/**/*'
+    - 'db/**/*'
+
+Style/Documentation:
+  Enabled: false
+
+Style/FrozenStringLiteralComment:
+  Enabled: false
+
+Naming/VariableNumber:
+  Enabled: false
+Naming/MethodName:
+  Enabled: false
+Rails/FilePath:
+  Enabled: false
+Rails/I18nLocaleTexts:
+  Enabled: false
+Lint/EmptyBlock:
+  Enabled: false
+Style/AccessModifierDeclarations:
+ Enabled: false
+Layout/LineLength:
+  Max: 160
+
+Metrics/MethodLength:
+  Max: 20
+
+Metrics/BlockLength:
+  Exclude:
+    - 'spec/**/*_spec.rb'
+    - 'config/*'
+    - 'db/*'

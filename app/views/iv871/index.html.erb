@@ -1,0 +1,20 @@
+<h1>ИВ-871</h1>
+<%= stylesheet_link_tag "mycss" %>
+ <table>
+<tr><th>Студенты</th><th>Оценка</th></tr>
+<% @student.each do |stud| %>
+   
+    
+    <tr><td><%= stud.tittle %></td><td><%= stud.grady%></td><td><%= link_to 'Edit', edit_iv871_path(stud), :class => 'btn btn-warning' %></td>
+    <td><%= link_to 'Destroy', iv871_path ,
+              data: {
+                "turbo-method": :delete,
+                controller: "iv871",
+                "confirmation-message-value": 'Are you sure?',
+                action: "iv871#destroy"
+              } %></td></tr>
+    
+
+<% end %></table>
+<span><%= link_to "Добавление",
+        new_iv871_path %></span>
