@@ -1,7 +1,6 @@
 class Iv871Controller < ApplicationController
-
-    http_basic_authenticate_with name: "admins", password: "1234",
-    except: [:index, :show, :update]
+  http_basic_authenticate_with name: 'admins', password: '1234',
+                               except: %i[index show update]
   def index
     @student = Student.all
   end
